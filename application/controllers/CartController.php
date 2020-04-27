@@ -99,14 +99,16 @@ class CartController extends MY_Controller
             'date_added' => date('Y-m-d H:i:s'),
         );
         $order_id = $this->cart_model->place_order($order_data);
+        $cid = $this->db->insert_id($order_id);
         foreach ($cart_contents as $product) {
             $order_product_data = array(
                 'product_id' => $product['id'],
-                'order_id' => $order_id,
+                'order_id' => $cid,
                 'qty' => $product['qty'],
                 'user_id' =>  $this->session->userdata('user_id'),
                 'date_order' =>  date('Y-m-d H:i:s'),
             );
+
             $this->cart_model->add_orderProduct($order_product_data);
         }
         if ($order_id == TRUE) {

@@ -10,7 +10,7 @@ class Order_model extends CI_Model
 
     public function get_order($limit, $start, $st = "", $orderField, $orderDirection)
     {
-        $this->db->select();
+        $this->db->select('*');
         $this->db->from('order_product');
         $this->db->join('orders', 'orders.id = order_product.order_id', 'right');
         $this->db->join('product', 'product.id = order_product.product_id', 'right');

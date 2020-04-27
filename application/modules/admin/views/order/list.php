@@ -48,7 +48,7 @@
                         foreach ($order as $items) : ?>
                             <tr>
                                 <td><?= $i; ?></td>
-                                <td><?= $items->fname ?> <?= $items->lname ?></td>
+                                <td><?= $items->full_name ?></td>
                                 <td><a href="javascript:void(0)" id="imgLarge"><img class="img-product" id="imageresource" src="<?= base_url() . 'assets/upload/' . $items->product_image; ?>"></a></td>
                                 <td><?= $items->product_name ?></td>
                                 <td><?= $items->price ?></td>

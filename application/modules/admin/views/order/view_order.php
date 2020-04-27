@@ -16,7 +16,7 @@
                                 <tbody>
                                     <tr>
                                         <th style="width:20%">Name :</th>
-                                        <td><?= $items->fname ?><?= $items->fname ?></td>
+                                        <td><?= $items->full_name ?></td>
                                     </tr>
                                     <tr>
                                         <th>Delivery Address</th>
@@ -24,7 +24,15 @@
                                     </tr>
                                     <tr>
                                         <th>Contact Number:</th>
-                                        <td><?= $items->contact_no ?></td>
+                                        <td><?= $items->mobile_number ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Neareast Landmark:</th>
+                                        <td><?= $items->land_mark ?></td>
+                                    </tr>
+                                    <tr>
+                                        <th>City:</th>
+                                        <td><?= $items->city ?></td>
                                     </tr>
                                     <tr>
                                         <th>Order name:</th>
