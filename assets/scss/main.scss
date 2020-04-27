@@ -1,0 +1,17 @@
+.h-account {
+  margin: 0px;
+  padding: 0px;
+  li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    a {
+      color: #ffffff;
+
+      &:hover {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+}
