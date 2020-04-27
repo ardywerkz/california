@@ -58,7 +58,7 @@
             <div class="list-order">
               <ul class="orders">
                 <li>
-                  <p><?= $item->product_name; ?><br> <span class="price">PHP <?= $item->price; ?></span></p>
+                  <p><?= $item->product_name; ?><span class="price">PHP <?= $item->price; ?></span></p>
                 </li>
                 <li>
                   <?php echo form_open_multipart('add-to-cart'); ?>
@@ -99,18 +99,18 @@
             <div class="v-bg">
               <img src="<?php echo base_url() . 'assets/upload/' . $item->product_image; ?>" class="img-list">
             </div>
-            <div class="list-order">
+            <div class="list-order snacks">
               <ul class="orders">
                 <li>
-                  <p><?= $item->product_name; ?><br> <span class="price">PHP <?= $item->price; ?></span></p>
+                  <p><?= $item->product_name; ?><span class="price">PHP <?= $item->price; ?></span></p>
                 </li>
                 <li>
                   <?php echo form_open_multipart('add-to-cart'); ?>
                   <input type="hidden" name="id" value="<?php echo $item->id ?>">
                   <?php if (!isset($this->session->userdata['username'])) { ?>
-                    <a href="javascript:void(0)" class="addCart" id="requiredLogin" onclick="required(this)"><i class="fas fa-cart-plus fa-order"></i></a>
+                    <a href="javascript:void(0)" class="addCart" id="requiredLogin" onclick="required(this)"><i class="fas fa-cart-plus fa-order-snacks"></i></a>
                   <?php } else { ?>
-                    <button type="submit" class="addCart"><i class="fas fa-cart-plus fa-order"></i></button>
+                    <button type="submit" class="addCart"><i class="fas fa-cart-plus fa-order-snacks"></i></button>
                   <?php } ?>
 
                   <?php echo form_close(); ?>

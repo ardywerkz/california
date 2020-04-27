@@ -3,33 +3,42 @@
     <div class="row">
         <div class="col-8" data-scrollreveal="enter right after 0.5s">
             <div class="table-responsive">
-                <?php echo form_open_multipart('add-to-cart'); ?>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col"> </th>
-                            <th scope="col">Product name</th>
-                            <th scope="col">Price</th>
-                            <th scope="col" class="text-center">Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $i = 0;
-                        foreach ($cart as $items) : ?>
-                            <tr>
-                                <td><img class="size50" src="<?= base_url() . 'assets/upload/' . $items['product_image'] ?>" /> </td>
-                                <td><?= $items['name'] ?></td>
-                                <td><?= $items['price'] ?></td>
-                                <td>
-                                    <input class="form-control" type="text" value="<?= $items['qty'] ?>" />
-                                </td>
+                <?php echo form_open_multipart('cart/update'); ?>
+                <div class="row">
+                    <?php $i = 0;
+                    foreach ($cart as $items) : ?>
+                        <div class="col-md-4">
+                            <img class="view-cart-img" src="<?= base_url() . 'assets/upload/' . $items['product_image'] ?>" />
+                        </div>
+                        <div class="col-md-8">
+                            <div class="v-cart-d">
+                                <div class="title">
+                                    <h2><?= $items['name'] ?></h2>
+                                    <h2 class="price">₱ <?= $items['price'] ?></h2>
+                                </div>
+                                <div class="gty">
 
-                            </tr>
-                        <?php $i++;
-                        endforeach; ?>
-                    </tbody>
-                </table>
-                <?php echo form_close(); ?>
+                                    <div class="input-group">
+                                        <input class="" type="hidden" name="<?php echo "cart[$i][rowid]" ?>" value="<?php echo $items['rowid']; ?>">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-number" data-type="minus" data-field="<?php echo "cart[$i][qty]" ?>">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </span>
+                                        <input type="text" class="form-control input-number" name="<?php echo "cart[$i][qty]" ?>" value="<?= $items['qty'] ?>" min="1" max="100">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-number" data-type="plus" data-field="<?php echo "cart[$i][qty]" ?>">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php $i++;
+                    endforeach; ?>
+                </div>
+                </form>
             </div>
         </div>
         <!-- total -->
@@ -43,7 +52,7 @@
                         Subtotal:
                     </span>
                     <span class="m-text21 w-size20 w-full-sm">
-                        <?php echo "SRP. " . number_format($this->cart->total()) . ""; ?> </span>
+                        <?php echo "₱ " . number_format($this->cart->total()) . ""; ?> </span>
                 </div>
 
                 <?php echo validation_errors(); ?>
@@ -53,14 +62,38 @@
                         Total:
                     </span>
                     <span class="m-text21 w-size20 w-full-sm">
-                        <?php echo "SRP. " . number_format($this->cart->total()) . " "; ?> </span>
+                        <?php echo "₱ " . number_format($this->cart->total()) . " "; ?> </span>
                 </div>
                 <div class="flex-w flex-sb-m p-t-26 p-b-30">
                     <span class="m-text22 w-size19 w-full-sm">
                         Delivery Address:
                     </span>
-                    <span class="m-text21 w-size20 w-full-sm effect1 w-size9">
-                        <textarea type="text" name="delivery_address" cols="5" rows="5" required="required" class="form-control"></textarea>
+                    <span class="m-text21 w-size20 w-full-sm w-size9">
+                        <textarea type="text" name="delivery_address" cols="5" rows="3" required="required" class="form-control" placeholder="Complete Address"></textarea>
+                    </span>
+                    <span class="m-text22 w-size19 w-full-sm">
+                        Nearest Landmark:
+                    </span>
+                    <span class="m-text21 w-size20 w-full-sm w-size9">
+                        <input type="text" name="land_mark" class="form-control" required="required" placeholder="Easy tracking of location">
+                    </span>
+                    <span class="m-text22 w-size19 w-full-sm">
+                        Complete Name:
+                    </span>
+                    <span class="m-text21 w-size20 w-full-sm w-size9">
+                        <input type="text" name="full_name" class="form-control" required="required" placeholder="Complete Name">
+                    </span>
+                    <span class="m-text22 w-size19 w-full-sm">
+                        Contact Information:
+                    </span>
+                    <span class="m-text21 w-size20 w-full-sm w-size9">
+                        <input type="text" name="mobile_number" class="form-control" required="required" placeholder="Mobile Phone Number">
+                    </span>
+                    <span class="m-text22 w-size19 w-full-sm">
+                        City:
+                    </span>
+                    <span class="m-text21 w-size20 w-full-sm w-size9">
+                        <input type="text" name="city" class="form-control" required="required" placeholder="City">
                     </span>
                 </div>
                 <div class="cartBtn">

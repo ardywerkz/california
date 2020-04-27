@@ -90,6 +90,10 @@ class CartController extends MY_Controller
         $order_data = array(
             'user_id' => $this->session->userdata('user_id'), //Logged in user id
             'delivery_address' => $this->input->post('delivery_address'),
+            'land_mark' => $this->input->post('land_mark'),
+            'full_name' => $this->input->post('full_name'),
+            'mobile_number' => $this->input->post('mobile_number'),
+            'city' => $this->input->post('city'),
             'order_status' => '1',
             'total_amt' => $total_amt,
             'date_added' => date('Y-m-d H:i:s'),

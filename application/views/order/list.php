@@ -48,12 +48,12 @@
             $tab_content .= '</ul></div>';
         endforeach; ?>
         <div class="col-md-3">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" data-scrollreveal="enter left after 0.5s">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <?php echo $tab_menu; ?>
             </div>
         </div>
         <div class="col-md-9">
-            <div class="tab-content" id="v-pills-tabContent" data-scrollreveal="enter right after 0.5s">
+            <div class="tab-content" id="v-pills-tabContent">
                 <?php echo $tab_content; ?>
 
             </div>

@@ -48,7 +48,9 @@ a:hover {
 
   display: flex;
 }
-
+.view-cart-img {
+  width: 15.5rem;
+}
 /* ++++++++++++++++++++++
 
 - register -
@@ -627,9 +629,9 @@ a:hover {
 
 .m-text21,
 .m-text22 {
-  font-size: 18px;
-
+  font-size: 17px;
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .effect1 {
@@ -668,20 +670,53 @@ a:hover {
 
 .btn-pink:hover {
   color: #ffffff;
-
   text-decoration: none;
-
   background: #e45090;
-
   border-color: #e45090;
-
   border-radius: 0;
 }
-
+.btn-carts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.btn-carts .sub {
+  width: 13.4rem;
+}
+.btn-carts .sub:last-child {
+  margin-left: 6px;
+}
+.btn-carts .btn-outline-primary {
+  color: #ffffff;
+  border-color: #e45090;
+  background: #e45090;
+}
+.btn-number {
+  color: #ffffff;
+  background-color: #aaaaaa;
+  border-color: #aaaaaa;
+}
 .viewCart .table-responsive {
   border: #dcd7d7 1px solid;
+  overflow: hidden;
+  padding: 10px;
 }
-
+.viewCart .v-cart-d {
+  margin-left: 17px;
+}
+.viewCart .v-cart-d .price {
+  color: #d21a6d;
+  font-weight: bold;
+  font-size: 26px;
+}
+.viewCart .gty {
+  width: 8rem;
+  margin-top: 30px;
+}
+.viewCart .form-control {
+  border: 1px solid #aaaaaa;
+}
 .btn-light-pink {
   color: #ffffff;
 
@@ -1042,7 +1077,7 @@ products
 }
 
 .price {
-  /* display: none; */
+  display: none;
 }
 
 .products .v-bg .img-list {
@@ -1055,25 +1090,19 @@ products
 
 .products .list-order {
   background-color: #683a6f;
-
   color: #fff;
-
   padding: 2px;
-
   box-shadow: 0 8px 6px -6px black;
 }
-
+.products .snacks {
+  background-color: #ff006e;
+}
 .products .list-order .orders {
   list-style: none;
-
   display: flex;
-
   justify-content: space-between;
-
   flex-wrap: wrap;
-
   padding: 0;
-
   margin: 0 0.55rem;
 }
 
@@ -1097,26 +1126,28 @@ products
 
 .products .fa-order {
   background: #ff107c;
-
   width: 27px;
-
   height: 25px;
-
   padding: 5px;
-
   color: #fff;
-
   border-radius: 2px;
+  font-size: 14px;
+}
 
+.products .fa-order-snacks {
+  background-color: #702868;
+  width: 27px;
+  height: 25px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 2px;
   font-size: 14px;
 }
 
 .products .list-order .orders > li > p {
   margin: 0;
-
   font-size: 1rem;
-
-  line-height: 1.2;
+  line-height: 2.2;
 }
 
 .products .list-order .orders > li > p > span {
@@ -1320,9 +1351,7 @@ footer
 
 .tab-order .img-order .list > li {
   list-style: none;
-
-  width: 180px;
-
+  width: 255px;
   margin-bottom: 1.3rem;
 }
 
@@ -1359,6 +1388,7 @@ footer
 .tab-order .link-order .div .sub span {
   font-size: 12px;
   color: #ffc107;
+  display: none;
 }
 
 .tab-order .link-order .div .sub .fa-order {
