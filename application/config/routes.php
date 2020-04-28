@@ -70,9 +70,9 @@ $route['cart/delete'] = 'CartController/deleteCart';
 $route['cart/history'] = 'CartController/checkOut_history';
 $route['profile'] = 'CartController/myAccount';
 $route['profile/update'] = 'CartController/updateProfile';
-//contact us
+//menu
 $route['contact-us'] = 'contact/index';
-
+$route['about-us'] = 'about/index';
 /*=======================================
 Backend
 ========================================*/
