@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Chivo&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 body {
   width: 100%;
@@ -50,6 +48,34 @@ a:hover {
 }
 .view-cart-img {
   width: 15.5rem;
+}
+
+/*++++++++++++++++
+ about us
+ +++++++++++++++++++ */
+#about .title {
+  font-family: "Fjalla One", sans-serif;
+  color: #683a6f;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+#about .first {
+  margin-top: 28px;
+}
+#about .content {
+  margin-bottom: 15px;
+}
+#about .content h3 {
+  color: #683a6f;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+#about .content p {
+  color: #d21a6d;
 }
 /* ++++++++++++++++++++++
 
