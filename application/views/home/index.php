@@ -44,14 +44,14 @@
     </div>
   </div>
 </div>
-<div class="products" data-scrollreveal="enter top over 3s after 0.5s">
+<div class="products">
   <div class="container">
     <div class="title"><img src="<?php echo base_url(); ?>front/vendor/img/products/title.jpg" class="img-title"></div>
     <?php $this->load->view('component/message'); ?>
     <div class="row">
       <ul class="v-inner-sell">
         <?php foreach ($products as $item) : ?>
-          <li>
+          <li data-scrollreveal="enter top over 3s after 0.5s">
             <div class="v-bg">
               <img src="<?php echo base_url() . 'assets/upload/' . $item->product_image; ?>" class="img-list">
             </div>
@@ -88,14 +88,14 @@
 </div>
 
 
-<div class="products" data-scrollreveal="enter top over 3s after 0.5s">
+<div class="products">
   <div class="container">
     <div class="title"><img src="<?php echo base_url(); ?>front/vendor/img/snaks-btn.png" class="img-title"></div>
     <?php $this->load->view('component/message'); ?>
     <div class="row">
       <ul class="v-inner-sell">
         <?php foreach ($snacks as $item) : ?>
-          <li>
+          <li data-scrollreveal="enter top over 3s after 0.5s">
             <div class="v-bg">
               <img src="<?php echo base_url() . 'assets/upload/' . $item->product_image; ?>" class="img-list">
             </div>

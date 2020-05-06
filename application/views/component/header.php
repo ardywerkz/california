@@ -95,6 +95,9 @@
          <li class="nav-item <?php echo ($this->router->fetch_class() == 'orders' ? 'active' : ''); ?>">
            <a class="nav-link" href="<?= site_url('orders/') ?>">Shop Now</a>
          </li>
+         <li class="nav-item <?php echo ($this->router->fetch_class() == 'outlet' ? 'active' : ''); ?>">
+           <a class="nav-link" href="<?= site_url('outlet/') ?>">OutLets</a>
+         </li>
          <li class="nav-item <?php echo ($this->router->fetch_class() == 'contact' ? 'active' : ''); ?>">
            <a class="nav-link" href="<?= base_url('contact-us/') ?>">Contact Us</a>
          </li>

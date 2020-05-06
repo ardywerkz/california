@@ -78,6 +78,53 @@ a:hover {
   color: #d21a6d;
 }
 
+/*++++++++++++++++
+outlet
+ +++++++++++++++++++ */
+#outlet .title {
+  font-family: "Fjalla One", sans-serif;
+  color: #683a6f;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+#outlet .img-outlet {
+  width: 100%;
+  display: block;
+  border: 1px solid #fe99c5;
+}
+#outlet .content {
+  padding-top: 2.5rem;
+}
+#outlet .sub h3 {
+  color: #683a6f;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+#outlet .sub {
+  margin-top: 1.5rem;
+}
+#outlet .sub ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#outlet .sub ul > li {
+  list-style: none;
+}
+#outlet .sub ul > li span {
+  color: #d21a6d;
+  font-weight: normal;
+}
+#outlet ul > li {
+  color: #683a6f;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 /* ++++++++++++++++++++++
 
 - register -

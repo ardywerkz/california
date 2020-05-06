@@ -21,7 +21,7 @@
             // print_r($product_query);
             foreach ($product_query as $sub) :
                 $tab_content .= '
-                        <li>
+                        <li data-scrollreveal="enter top over 3s after 0.5s">
                             <img src="' . base_url() . 'assets/upload/' . $sub->product_image . '" class="img-list">
                             <div class="link-order">
                                 <div class="div">
