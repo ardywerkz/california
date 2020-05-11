@@ -133,42 +133,7 @@
 
 
 
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4" data-scrollreveal="enter right after 0.5s">
-        <ul class="div1">
-          <li>Customer Care</li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">How to Buy</a></li>
-          <li><a href="#">Shipping & Delivery</a></li>
-          <li><a href="#">How to Return</a></li>
-          <li><a href="#">Question</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-4" data-scrollreveal="enter top over 3s after 0.5s">
-        <ul class="div2">
-          <li>California Food Gift</li>
-          <li><a href="#">About California Food Gift</a></li>
-          <li><a href="#">Affliate Program</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-4" data-scrollreveal="enter left after 0.5s">
 
-        <ul class="div3">
-          <h5>Follow us:</h5>
-          <li><a href="#"><img src="<?php echo base_url(); ?>front/vendor/img/social/ins.png" alt=""></a></li>
-          <li><a href="#"><img src="<?php echo base_url(); ?>front/vendor/img/social/fb.png" alt=""></a></li>
-          <li><a href="#"><img src="<?php echo base_url(); ?>front/vendor/img/social/tw.png" alt=""></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Modal Registers -->
 <div class="modal fade" id="modal_form_register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

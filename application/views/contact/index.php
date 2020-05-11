@@ -35,11 +35,15 @@
                         </div>
                         <div class="sub">
                             <h4>California Food Gift Novaliches</h4>
-                            <p>Lorem ipsum dolor sit amet.<br>Lorem, ipsum.</p>
+                            <p>
+                                Katipunan ave. California Village Novaliches Quezon City <br>( Beside California Garder Resort )
+                            </p>
                         </div>
                         <div class="sub">
                             <h4>California Food Gift Cavite</h4>
-                            <p>Lorem ipsum dolor sit amet.<br>Lorem, ipsum.</p>
+                            <p>
+                                Mistral Road, Elang, San Francisco <br>General Trias City, Cavite
+                            </p>
                         </div>
                     </div>
                 </div>

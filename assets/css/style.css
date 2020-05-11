@@ -63,6 +63,16 @@ a:hover {
   letter-spacing: 1px;
   font-size: 1.8rem;
 }
+#about .title-c {
+  font-family: "Fjalla One", sans-serif;
+  color: #d21a6d;
+  border-bottom: 1px solid #e8e8e8;
+  margin-top: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
 #about .first {
   margin-top: 28px;
 }
@@ -74,8 +84,16 @@ a:hover {
   font-weight: 600;
   font-size: 1.4rem;
 }
+#about .content h5 {
+  color: #683a6f;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 #about .content p {
   color: #d21a6d;
+}
+#about .content-c p {
+  color: #683a6f;
 }
 
 /*++++++++++++++++
@@ -1280,91 +1298,70 @@ footer
 
 ==========================*/
 
-.wrapper .footer {
+.footer {
   background-color: #d21a6d;
-
   color: #ffffff;
-
   padding: 15px;
 }
-
-.wrapper .footer .div1 {
+.footer .div1 {
   padding: 0;
-
   margin: 0;
-
   list-style: none;
 }
 
-.wrapper .footer .div1 > li {
+.footer .div1 > li {
   line-height: 1.4;
 }
-
-.wrapper .footer .div1 > li:first-child {
+.footer .div1 > li:first-child {
   font-size: 1.5rem;
-
   font-weight: 500;
-
   margin-bottom: 0.3rem;
 }
-
-.wrapper .footer .div1 > li > a {
+.footer .div1 > li > a {
   color: #ffffff;
-
   font-size: 13px;
 }
-
-.wrapper .footer .div2 {
+.footer .div2 {
   padding: 0;
-
   margin: 0;
-
   list-style: none;
-
   padding-left: 3.5rem;
 }
 
-.wrapper .footer .div2 > li {
+.footer .div2 > li {
   line-height: 1.4;
 }
 
-.wrapper .footer .div2 > li:first-child {
+.footer .div2 > li:first-child {
   font-size: 1.5rem;
-
   font-weight: 500;
-
   margin-bottom: 0.3rem;
 }
-
-.wrapper .footer .div2 > li > a {
+.footer .div2 > li > a {
   color: #ffffff;
-
   font-size: 13px;
 }
 
-.wrapper .footer .div3 {
+.footer .div3 {
   padding: 0;
-
   margin: 0;
-
   list-style: none;
-
   float: right;
 }
 
-.wrapper .footer .div3 h5 {
+.footer .div3 h5 {
   font-size: 1.35rem;
 }
 
-.wrapper .footer .div3 > li {
+.footer .div3 > li {
   display: inline;
 }
 
-.wrapper .footer .div3 > li > a {
+.footer .div3 > li > a {
   color: #ffffff;
 }
 
-.wrapper .footer .div3 > li > a > img {
+.footer .div3 > li > a > img {
   width: 1.7rem;
 }
 

@@ -59,6 +59,11 @@ Frontend
 //login
 $route['login'] = 'account/login/';
 
+//footer
+$route['privacy-policy'] = 'about/privacy/';
+$route['terms-use'] = 'about/termsUse/';
+$route['careers'] = 'about/careers/';
+
 
 //cart
 $route['add-to-cart'] = 'CartController/addCart';
