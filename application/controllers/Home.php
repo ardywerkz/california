@@ -29,7 +29,7 @@ class Home extends MY_Controller
     public function index()
     {
         $config['base_url'] = site_url('home/index'); //site url
-        $config['total_rows'] = $this->db->count_all('product'); //total row
+        $config['total_rows'] = $this->home_model->count_all_product(); //total row
         $config['per_page'] = 15;  //show record per row
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];

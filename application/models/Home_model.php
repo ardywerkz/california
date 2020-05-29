@@ -8,7 +8,10 @@ class Home_model extends CI_Model
         parent::__construct();
         $this->load->database();
     }
-
+    public function count_all_product($store = 1, $selling = 0)
+    {
+        return $this->db->query('SELECT * FROM product WHERE store_id = ' . $store . ' AND selling = ' . $selling . ' ORDER BY created_at DESC')->num_rows();
+    }
     public function getSlider()
     {
         return $this->db->query('SELECT * FROM slider ORDER BY created_at DESC')->result();
