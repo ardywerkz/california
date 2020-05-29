@@ -102,6 +102,17 @@
            <a class="nav-link" href="<?= base_url('contact-us/') ?>">Contact Us</a>
          </li>
        </ul>
+       <ul class="navbar-nav ml-auto">
+         <li class="nav-item dropdown">
+           <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+             Store Product
+           </a>
+           <div class="dropdown-menu">
+             <a class="dropdown-item" href="<?= site_url('home/') ?>">Novaliches</a>
+             <a class="dropdown-item" href="<?= site_url('cavite/branch/') ?>">Cavite</a>
+           </div>
+         </li>
+       </ul>
      </div>
    </div>
  </nav>

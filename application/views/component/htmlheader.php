@@ -14,6 +14,7 @@
   <link href="<?php echo base_url(); ?>assets/css/sweetalert2.min.css?<?php echo time(); ?>" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/fontawesome-free/css/all.min.css?<?php echo time(); ?>">
   <link href="<?php echo base_url(); ?>assets/css/owl.carousel.min.css?<?php echo time(); ?>" rel="stylesheet">
+  <link href="<?php echo base_url(); ?>assets/css/owl.theme.default.min.css?<?php echo time(); ?>" rel="stylesheet">
   <link href="<?php echo base_url(); ?>assets/css/style.css?<?php echo time(); ?>" rel="stylesheet">
 
   <!-- jQuery 3 -->

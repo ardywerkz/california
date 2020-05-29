@@ -71,4 +71,12 @@ class Category extends MY_Controller
         $id = $this->input->post('id');
         $this->category_model->delete_category($id);
     }
+
+    //store category
+    public function storeCategory()
+    {
+        $data['store'] = $this->db->query('SELECT * FROM store_category ORDER BY `store_name` ASC')->result();
+        $data['subview'] = $this->load->view('category/store', $data, TRUE);
+        $this->load->view('layouts', $data);
+    }
 }

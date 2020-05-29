@@ -1,11 +1,47 @@
 $(document).ready(function () {
-  $(".owl-carousel").owlCarousel({
+  $("#selling").owlCarousel({
+    item: 4,
     loop: true,
     margin: 10,
-    item: 4,
-    autoWidth: true,
     autoplay: true,
+    autoWidth: true,
+    autoplayTimeout: 3000,
     responsiveClass: true,
+    nav: true,
+    navText: [
+      "<div class='nav-btn prev-slide'></div>",
+      "<div class='nav-btn next-slide'></div>",
+    ],
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+      },
+      600: {
+        items: 3,
+        nav: false,
+      },
+      1000: {
+        items: 5,
+        nav: true,
+        loop: false,
+        margin: 20,
+      },
+    },
+  });
+  $("#snacks-carousel").owlCarousel({
+    item: 4,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoWidth: true,
+    autoplayTimeout: 3000,
+    responsiveClass: true,
+    nav: true,
+    navText: [
+      "<div class='nav-btn-1 prev-slide'></div>",
+      "<div class='nav-btn-1 next-slide'></div>",
+    ],
     responsive: {
       0: {
         items: 1,
@@ -70,16 +106,16 @@ $(document).ready(function () {
   });
 
   //Nice scroll initialization
-  $("html").niceScroll({
-    scrollspeed: 60,
-    autohidemode: false,
-    cursorwidth: 8,
-    cursorborderradius: 8,
-    cursorborder: "0",
-    background: "rgba(253,84,172,0.3)",
-    cursorcolor: "rgb(253, 84, 172)",
-    zindex: 999,
-  });
+  // $("html").niceScroll({
+  //   scrollspeed: 60,
+  //   autohidemode: false,
+  //   cursorwidth: 8,
+  //   cursorborderradius: 8,
+  //   cursorborder: "0",
+  //   background: "rgba(253,84,172,0.3)",
+  //   cursorcolor: "rgb(253, 84, 172)",
+  //   zindex: 999,
+  // });
   //plugin bootstrap minus and plus
   //http://jsfiddle.net/laelitenetwork/puJ6G/
   $(".btn-number").click(function (e) {

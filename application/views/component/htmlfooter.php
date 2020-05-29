@@ -39,7 +39,9 @@
 <script src="<?php echo base_url(); ?>front/vendor/bootstrap/js/bootstrap.bundle.min.js?<?php echo time(); ?>"></script>
 <script src="<?php echo base_url(); ?>assets/js/owl.carousel.js?<?php echo time(); ?>"></script>
 <script src="<?php echo base_url(); ?>assets/js/script.js?<?php echo time(); ?>"></script>
-<script src="<?php echo base_url(); ?>assets/js/nicescroll.js?<?php echo time(); ?>"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/js/nicescroll.js?<?php echo time(); ?>"></script> -->
+<script src="<?php echo base_url(); ?>assets/js/modernizr.custom.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/toucheffects.js"></script>
 <script>
   var base_url = '<?php echo base_url() ?>';
 </script>

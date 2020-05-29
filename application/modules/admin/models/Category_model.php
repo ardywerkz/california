@@ -27,13 +27,8 @@ class Category_model extends CI_Model
         }
     }
 
-    public function update_category($id, $name){
-       $this->db->query('UPDATE category SET `name` = "'.$name.'" WHERE id = "'.$id.'"');
+    public function update_category($id, $name)
+    {
+        $this->db->query('UPDATE category SET `name` = "' . $name . '" WHERE id = "' . $id . '"');
     }
-    public function delete_category($id){
-        $this->db->query('DELETE category FROM category where id="'.$id.'"');
-    }
-
-
-
 }

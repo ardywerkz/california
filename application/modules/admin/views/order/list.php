@@ -33,7 +33,8 @@
                     <thead>
                         <tr>
                             <th style="width: 10px">#</th>
-                            <th>Name</th>
+                            <th>Store Branch</th>
+                            <th>Client Name</th>
                             <th>Product order</th>
                             <th>Product name</th>
                             <th>Price</th>
@@ -45,9 +46,13 @@
                     </thead>
                     <tbody>
                         <?php $i = 1;
-                        foreach ($order as $items) : ?>
+                        foreach ($order as $items) :
+
+                        ?>
+
                             <tr>
                                 <td><?= $i; ?></td>
+                                <td><?= $items->store_name ?></td>
                                 <td><?= $items->full_name ?></td>
                                 <td><a href="javascript:void(0)" id="imgLarge"><img class="img-product" id="imageresource" src="<?= base_url() . 'assets/upload/' . $items->product_image; ?>"></a></td>
                                 <td><?= $items->product_name ?></td>

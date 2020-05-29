@@ -1,5 +1,14 @@
+<style>
+    .tab-order .title-cavite {
+        text-align: center;
+        color: #683a6f;
+        font-size: 2.1rem;
+        margin-bottom: 1.3rem;
+    }
+</style>
 <div class="container tab-order">
     <?php $this->load->view('component/message'); ?>
+    <h1 class="title-cavite"> Cavite Product</h1>
     <div class="row">
         <?php
         $tab_query  = $this->db->query('SELECT * FROM category ORDER BY id ASC')->result();
@@ -16,9 +25,9 @@
                 $tab_menu .= '<a class="nav-link" id="v-tab' . $row->id . '-tab" data-toggle="pill" href="#tab' . $row->id . '" role="tab" aria-controls="tab' . $row->id . '" aria-selected="true">' . $row->name . '</a>';
                 $tab_content .= '<div class="tab-pane fade img-order" id="tab' . $row->id . '" role="tabpanel" aria-labelledby="v-tab' . $row->id . '-tab"> <ul class="list">';
             }
-            $novaliches_id = 1;
+            $cavite_id = 2;
             $selling = 0;
-            $product_query = $this->db->query('SELECT * FROM product WHERE category_id="' . $row->id . '" AND store_id = "' . $novaliches_id . '" AND selling = "' . $selling . '" ORDER BY created_at DESC')->result();
+            $product_query = $this->db->query('SELECT * FROM product WHERE category_id="' . $row->id . '" AND store_id= "' . $cavite_id . '" AND selling = "' . $selling . '" ORDER BY created_at DESC')->result();
             // echo '<pre>';
             // print_r($product_query);
             foreach ($product_query as $sub) :

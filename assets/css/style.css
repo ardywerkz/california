@@ -993,119 +993,193 @@ slider
 }
 
 /* ========================
-
 selling 
-
 ==========================*/
-
-.selling .title .img-title {
-  width: 15.5rem;
-
-  margin: 0 auto;
-
-  display: block;
-
-  margin-top: 15px;
-
-  margin-bottom: 15px;
+.carousel-wrap {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
 }
 
-.owl-item {
-  width: 262px !important;
-
-  margin: 0 auto;
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #2caae1;
+}
+.owl-carousel .nav-btn {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 3.5rem;
+}
+.owl-carousel .nav-btn-1 {
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 5.9rem;
 }
 
-.owl-nav {
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+  background: url(../../assets/nav-icon.png) no-repeat scroll 0 0;
+  left: -33px;
+}
+.owl-carousel .next-slide {
+  background: url(../../assets/nav-icon.png) no-repeat scroll -24px 0px;
+  right: -33px;
+}
+.owl-carousel .prev-slide:hover {
+  background-position: 0px -53px;
+}
+.owl-carousel .next-slide:hover {
+  background-position: -24px -53px;
+}
+.owl-theme .owl-dots {
   display: none;
 }
 
-.selling figure {
-  /* width: 262px;
-
-  height: 156px; */
-
-  position: relative;
-
-  overflow: hidden;
+span.img-text {
+  text-decoration: none;
+  outline: none;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  cursor: pointer;
+  width: 100%;
+  font-size: 23px;
+  display: block;
+  text-transform: capitalize;
+}
+span.img-text:hover {
+  color: #2caae1;
 }
 
-.selling figure img {
-  -webkit-transition: all linear 300ms;
-
-  -moz-transition: all linear 300ms;
-
-  -o-transition: all linear 300ms;
-
-  transition: all linear 300ms;
-
-  width: 100%;
-
+.selling .title .img-title {
+  width: 15.5rem;
+  margin: 0 auto;
   display: block;
-
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.owl-item {
+  width: 262px !important;
   margin: 0 auto;
 }
 
-.selling figure:hover img {
-  -webkit-transform: scale(1.1) rotateZ(3deg);
-
-  -moz-transform: scale(1.1) rotateZ(3deg);
-
-  -ms-transform: scale(1.1) rotateZ(3deg);
-
-  -o-transform: scale(1.1) rotateZ(3deg);
-
-  transform: scale(1.1) rotateZ(3deg);
+.selling figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.selling figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+.selling .cs-style-3 figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
 }
 
-.selling figure:hover figcaption {
+.cs-style-3 figure {
+  overflow: hidden;
+}
+
+.cs-style-3 figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+  height: 80px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
   opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .selling figcaption {
   position: absolute;
-
-  top: -54px;
-
-  font-size: 30px;
-
-  height: 100%;
-
-  width: 100%;
-
-  background-color: rgba(0, 0, 0, 0.6);
-
-  color: #ffffff;
-
-  opacity: 0;
-
-  padding: 43% 36% !important;
-
-  color: #ffffff;
-
-  -webkit-transition: all linear 400ms;
-
-  -moz-transition: all linear 400ms;
-
-  -o-transition: all linear 400ms;
-
-  transition: all linear 400ms;
+  left: 0;
+  padding: 7px;
+  background: #f9e2e2;
+  color: #ed4e6e;
 }
-
-.selling figcaption span {
-  border: 2px solid #f3f3f3;
-
-  padding: 0px 18px;
-
-  color: #ffffff;
-
+.selling figcaption h3 {
+  margin: 0;
+  padding: 0;
+  color: #d21a6d;
   font-size: 20px;
+}
+.selling figcaption span {
+  color: #683a6f;
+}
+.selling figcaption span:before {
+  content: "₱ ";
+}
+.cs-style-3 figcaption .btn-addcart {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+.selling figcaption .btn-addcart {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #d21a6d;
+  color: #fff;
+  border-color: transparent;
 }
 
 /* ========================
-
 products 
-
 ==========================*/
 
 .products {
@@ -1120,51 +1194,37 @@ products
 
 .products .v-inner-sell {
   display: flex;
-
   justify-content: space-between;
-
   flex-wrap: wrap;
-
   padding-right: 15px;
-
   padding-left: 15px;
 }
 
 .products .v-inner-sell > li {
   list-style: none;
-
   width: 262px;
-
   margin-bottom: 20px;
 }
 
 .products .v-inner-sell > li:hover {
   box-shadow: 0 0 8px 3px #e45090;
-
   -webkit-transition: all linear 400ms;
-
   -moz-transition: all linear 400ms;
-
   -o-transition: all linear 400ms;
-
   transition: all linear 400ms;
 }
 
 .products .v-inner-sell > li .v-bg {
   overflow: hidden;
 }
-
 .products .v-inner-sell > li .v-bg:hover img {
   transform: scale(1.1);
 }
-
 .products .v-inner-sell > li .v-bg img {
   transition: transform 0.3s;
 }
-
 .products .img-product {
   width: 16.5rem;
-
   margin-bottom: 0.8rem;
 }
 
@@ -1174,10 +1234,7 @@ products
 
 .products .v-bg .img-list {
   width: 100%;
-
   box-shadow: 0 8px 6px -6px #00000061;
-
-  padding-bottom: 8px;
 }
 
 .products .list-order {
@@ -1200,7 +1257,6 @@ products
 
 .products .list-order .orders > li {
   color: #fff;
-
   line-height: 1.1rem;
 }
 
@@ -1557,6 +1613,7 @@ footer
   }
 
   /* selling */
+
   .owl-item {
     width: 11.5rem !important;
     margin: 0 auto;

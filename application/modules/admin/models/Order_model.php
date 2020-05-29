@@ -15,6 +15,7 @@ class Order_model extends CI_Model
         $this->db->join('orders', 'orders.id = order_product.order_id', 'right');
         $this->db->join('product', 'product.id = order_product.product_id', 'right');
         $this->db->join('users', 'users.id = order_product.user_id');
+        $this->db->join('store_category', 'store_category.id = order_product.store_id', 'left');
         $this->db->or_like('users.fname', $st);
         $this->db->or_like('users.lname', $st);
         $this->db->or_like('users.contact_no', $st);
@@ -46,12 +47,12 @@ class Order_model extends CI_Model
 
     public function view_order($id)
     {
-        $this->db->select();
+        $this->db->select('*');
         $this->db->from('order_product');
         $this->db->join('orders', 'orders.id = order_product.order_id', 'right');
         $this->db->join('product', 'product.id = order_product.product_id', 'right');
         $this->db->join('users', 'users.id = order_product.user_id');
-        $this->db->where('order_product.user_id', $id);
+        $this->db->where('order_product.id', $id);
         $this->db->order_by('order_product.created_at', 'DESC');
         $query = $this->db->get();
         return $query->result();

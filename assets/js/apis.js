@@ -27,6 +27,20 @@ var apis = {
       data: data,
     });
   },
+  store_addCategory: function (data) {
+    return $.ajax({
+      type: "POST",
+      url: base_url + "inventory/addCategory",
+      data: data,
+    });
+  },
+  storeDeleteCategory: function (data) {
+    return $.ajax({
+      type: "POST",
+      url: base_url + "admin/inventory/delete_category ",
+      data: data,
+    });
+  },
   addProduct: function (data) {
     return $.ajax({
       type: "POST",
@@ -45,6 +59,13 @@ var apis = {
     return $.ajax({
       type: "POST",
       url: base_url + "deleteUser",
+      data: data,
+    });
+  },
+  deleteProduct_in: function (data) {
+    return $.ajax({
+      type: "POST",
+      url: base_url + "deleteProduct",
       data: data,
     });
   },

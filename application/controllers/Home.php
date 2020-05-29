@@ -60,8 +60,11 @@ class Home extends MY_Controller
 
         $data['slider'] = $this->home_model->getSlider();
         $data['selling'] = $this->home_model->getSelling();
+
         $data['snacks'] = $this->home_model->get_snacks();
         $data['products'] = $this->home_model->getProduct($config["per_page"], $data['page']);
+        // echo '<pre>';
+        // print_r($data['products']);
         $data['pagination'] = $this->pagination->create_links();
         $data['test'] = 'Test';
         $data['subview'] = $this->load->view('home/index', $data, TRUE);

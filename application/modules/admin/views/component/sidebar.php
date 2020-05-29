@@ -47,7 +47,7 @@
            <a href="#" class="nav-link <?php echo ($this->router->fetch_class() == 'category' ? 'active' : ''); ?>">
              <i class="nav-icon fas fa-bars"></i>
              <p>
-               Category Product
+               Category
                <i class="right fas fa-angle-left"></i>
              </p>
            </a>
@@ -55,7 +55,13 @@
              <li class="nav-item">
                <a href="<?= site_url('category') ?>" class="<?php if (in_array($this->uri->uri_string(), array('category', 'category'))) echo 'active'; ?> nav-link">
                  <i class="far fa-circle nav-icon"></i>
-                 <p>Category list</p>
+                 <p>Product Category</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href="<?= site_url('category/store') ?>" class="<?php if (in_array($this->uri->uri_string(), array('category/store', 'category/store'))) echo 'active'; ?> nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Store Category</p>
                </a>
              </li>
            </ul>

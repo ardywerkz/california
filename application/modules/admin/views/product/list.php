@@ -45,7 +45,8 @@
                     <thead>
                         <tr>
                             <th style="width: 10px">#</th>
-                            <th>Category name</th>
+                            <th>Product Category</th>
+                            <th>Store Category</th>
                             <th>Product name</th>
                             <th>Price</th>
                             <th>Image</th>
@@ -60,6 +61,7 @@
                             <tr>
                                 <td><?= $i; ?></td>
                                 <td><?= $items->name ?></td>
+                                <td><?= $items->store_name ?></td>
                                 <td><?= $items->product_name ?></td>
                                 <td><?= $items->price ?></td>
                                 <td><a href="javascript:void(0)" id="imgLarge"><img class="img-product" id="imageresource" src="<?= base_url() . 'assets/upload/' . $items->product_image; ?>"></a></td>

@@ -78,6 +78,13 @@ $route['profile/update'] = 'CartController/updateProfile';
 //menu
 $route['contact-us'] = 'contact/index';
 $route['about-us'] = 'about/index';
+
+//store
+$route['cavite/branch'] = 'store/cavite';
+
+
+
+
 /*=======================================
 Backend
 ========================================*/
@@ -104,6 +111,7 @@ $route['category'] = 'admin/category/index';
 $route['add_category'] = 'admin/category/addCategory';
 $route['update_category'] = 'admin/category/updateCategory';
 $route['delete_category'] = 'admin/category/deleteCategory';
+$route['category/store'] = 'admin/category/storeCategory';
 
 //product
 $route['product'] = 'admin/product/index';
@@ -114,6 +122,7 @@ $route['product/saveImage'] = 'admin/product/save_productImage';
 
 //order
 $route['order'] = 'admin/order/index';
+
 
 //setting
 $route['setting'] = 'admin/setting/index';

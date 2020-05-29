@@ -14,16 +14,16 @@
                 </div>
                 <?php echo form_open_multipart('product/add'); ?>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <!-- text input -->
                         <div class="form-group">
                             <label>Product Name</label>
                             <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Product name ..." autocomplete="off" value="<?= set_value('product_name'); ?>">
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>Product Category</label>
                             <select id="category_id" name="category_id" class="form-control">
                                 <option value="">Select category</option>
                                 <?php foreach ($category as $items) : ?>
@@ -32,25 +32,40 @@
                             </select>
                         </div>
                     </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Store Category</label>
+                            <select id="store_id" name="store_id" class="form-control">
+                                <option value="">Select category</option>
+                                <?php foreach ($store as $items) : ?>
+                                    <option value="<?= $items->id ?>"><?= $items->store_name; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label>Best selling product (optional)</label>
+                            <select id="selling" name="selling" class="form-control">
+                                <option value="">Select category</option>
+                                <option value="1">Publish</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
                         <!-- text input -->
                         <div class="form-group">
                             <label>Price</label>
                             <input type="text" class="form-control" id="price" name="price" placeholder="Price ..." autocomplete="off" value="<?= set_value('price'); ?>">
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="">Product image</label>
                             <input type="file" class="form-control" id="file" name="product_image" placeholder="Price ..." autocomplete="off" style="padding: 2px 16px;">
-                            <!-- <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input form-control" name="file" id="file">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                    </div>
-                                </div> -->
                         </div>
                     </div>
                 </div>

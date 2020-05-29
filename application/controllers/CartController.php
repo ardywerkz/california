@@ -46,6 +46,7 @@ class CartController extends MY_Controller
             'price'   => $product->price,
             'name'    => $product->product_name,
             'product_image' => $product->product_image,
+            'store_id' => $product->store_id,
             'options' => array('product_image' => $product_display_img)
         );
         $status = $this->cart->insert($data);
@@ -98,6 +99,7 @@ class CartController extends MY_Controller
             'total_amt' => $total_amt,
             'date_added' => date('Y-m-d H:i:s'),
         );
+
         $order_id = $this->cart_model->place_order($order_data);
         $cid = $this->db->insert_id($order_id);
         foreach ($cart_contents as $product) {
@@ -105,6 +107,7 @@ class CartController extends MY_Controller
                 'product_id' => $product['id'],
                 'order_id' => $cid,
                 'qty' => $product['qty'],
+                'store_id' => $product["store_id"],
                 'user_id' =>  $this->session->userdata('user_id'),
                 'date_order' =>  date('Y-m-d H:i:s'),
             );

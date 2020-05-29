@@ -68,7 +68,7 @@ class Order extends MY_Controller
         $config['total_rows'] = $this->order_model->count_order($config["per_page"], $data['page'], $data['searchFor'], $data['orderField'], $data['orderDirection']);
         $this->pagination->initialize($config);
         $data['pagination'] = $this->pagination->create_links();
-
+        // 
         $data['title'] = 'Add';
         $data['subview'] = $this->load->view('order/list', $data, TRUE);
         $this->load->view('layouts', $data);
@@ -78,8 +78,6 @@ class Order extends MY_Controller
     {
         if ($id) {
             $data['view'] = $this->order_model->view_order($id);
-            // echo '<pre>';
-            // print_r($data['view']);
             $data['title'] = 'Add';
             $data['subview'] = $this->load->view('order/view_order', $data, TRUE);
             $this->load->view('layouts', $data);

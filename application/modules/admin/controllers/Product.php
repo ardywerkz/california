@@ -79,21 +79,25 @@ class Product extends MY_Controller
     {
         $this->form_validation->set_rules('product_name', 'Product name', 'trim|required');
         $this->form_validation->set_rules('category_id', 'Category name', 'trim|required');
+        $this->form_validation->set_rules('store_id', 'Store name', 'trim|required');
         $this->form_validation->set_rules('price', 'Price', 'trim|required');
 
         if ($this->form_validation->run() == FALSE) {
 
             $data['title'] = 'Add';
             $data['category'] = $this->product_model->getCategory();
+            $data['store'] = $this->db->query('SELECT * FROM store_category ORDER BY `store_name` ASC')->result();
             $data['subview'] =  $this->load->view('product/add_product', $data, TRUE);
             $this->load->view('layouts', $data);
         } else {
             //get the form values
             $data['product_name'] = $this->input->post('product_name', TRUE);
             $data['category_id'] = $this->input->post('category_id', TRUE);
+            $data['store_id'] = $this->input->post('store_id', TRUE);
             $data['price'] = $this->input->post('price', TRUE);
             $data['product_image'] = $this->input->post('product_image', TRUE);
             $data['user_id'] = $this->session->userdata('user_id');
+            $data['selling'] = $this->input->post('selling');
 
             //file upload code 
             //set file upload settings 
@@ -107,7 +111,8 @@ class Product extends MY_Controller
                 // $this->load->view('upload_form', $error);
                 $data['title'] = 'Add';
                 $data['category'] = $this->product_model->getCategory();
-                $data['subview'] =  $this->load->view('product/add_product', $error, TRUE);
+                $data['store'] = $this->db->query('SELECT * FROM store_category ORDER BY `store_name` ASC')->result();
+                $data['subview'] =  $this->load->view('product/add_product', $data, $error, TRUE);
                 $this->load->view('layouts', $data);
             } else {
                 //file is uploaded successfully

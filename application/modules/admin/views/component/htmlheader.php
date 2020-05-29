@@ -22,17 +22,17 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/toastr/toastr.min.css?<?php echo time(); ?>">
   <!-- jQuery -->
   <script src="<?php echo base_url(); ?>plugins/jquery/jquery.min.js?<?php echo time(); ?>"></script>
-  <?php
-  $user = $this->session->userdata('username');
-  $login_time = $this->session->userdata('last_login_timestamp');
-  if (isset($user)) {
-    if ((time() - $login_time) > 900) // 900 = 15 * 60  
-    {
-      $this->session->unset_userdata('user_id');
-      $this->session->unset_userdata('username');
-      $this->session->unset_userdata('last_login_timestamp');
-      $this->session->sess_destroy();
-      redirect('adminlogin', 'refresh');
-    }
-  }
-  ?>
+  <!-- <?php
+        // $user = $this->session->userdata('username');
+        //$login_time = $this->session->userdata('last_login_timestamp');
+        //if (isset($user)) {
+        //  if ((time() - $login_time) > 900) // 900 = 15 * 60  
+        {
+          // $this->session->unset_userdata('user_id');
+          // $this->session->unset_userdata('username');
+          // $this->session->unset_userdata('last_login_timestamp');
+          // $this->session->sess_destroy();
+          // redirect('adminlogin', 'refresh');
+        }
+        // }
+        ?> -->
